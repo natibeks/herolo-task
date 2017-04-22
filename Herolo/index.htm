@@ -1,0 +1,47 @@
+﻿<html>
+<head>
+    <title>Herolo Task</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/ionicons.min.css" rel="stylesheet" />
+    <link href="css/mystyle.css" rel="stylesheet" />
+
+    <script src="js/packages/jquery-2.0.0.min.js"></script>
+    <script src="js/packages/angular.min.js"></script>
+    <script src="js/packages/bootstrap.min.js"></script>
+    <script src="/js/packages/angular-route.js"></script>
+
+    <script src="js/controllers/main.controller.js"></script>
+    <script src="js/controllers/table.controller.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/services.js"></script>
+
+</head>
+<body data-ng-app="myApp" data-ng-controller="MainController">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#Home">Herolo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#Home">Books Table <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="margin-bottom:50px">
+        <div ng-view></div>
+        <div class="loader" data-ng-if="dataLoading"></div>      
+    </div>
+    <footer>
+        <div style="text-align:center">
+            Created By Netanel Avaksis &copy; 2017
+        </div>
+    </footer>
+</body>
+
+</html>
