@@ -1,7 +1,6 @@
 ﻿app.factory('booksService', function ($q, $http) {
     var getBooks = function () {
         var d = $q.defer();
-        //$http.get('http://localhost:8080/server/books.json')
         $http.get('books.json')
 			.success(
 				function (data) {
@@ -10,7 +9,7 @@
 				})
 			.error(
 				function (error) {
-				    d.reject(error);
+				    d.reject("Server is unavailable.");
 				})
         return d.promise;
     };
