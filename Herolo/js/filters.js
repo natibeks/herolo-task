@@ -6,7 +6,7 @@ app.filter('capitalizeeachword', function () {
                 .toLowerCase()
                 .split(' ')
                 .map(function (word) {
-                    return word[0].toUpperCase() + word.substr(1);
+                    return word == "" ? "" : word[0].toUpperCase() + word.substr(1);
                 })
                 .join(' ');
     }
