@@ -64,4 +64,7 @@ app.controller('TableController', function ($scope, $rootScope, $http, $filter, 
     $scope.numberOfPages = function () {
         return Math.ceil($scope.books.length / $scope.pager.size);
     };
+    $scope.$watch('books.length', function () {
+        if ($scope.pager.curr>($scope.numberOfPages()-1)) $scope.decPage();
+    });
 });
