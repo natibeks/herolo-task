@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
     <title>Herolo Task</title>
 
@@ -20,6 +20,7 @@
 </head>
 <body data-ng-app="myApp" data-ng-controller="MainController">
     <header>
+        <!--Top navigation bar snippet-->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -34,9 +35,10 @@
         </nav>
     </header>
     <div class="container" style="margin-bottom:50px">
-        <div ng-view></div>
-        <div class="loader" data-ng-if="dataLoading"></div>
-        <div class="alert alert-dismissible alert-danger" data-ng-if="loadingError!=''" data-ng-bind="loadingError"></div>  
+        
+        <div ng-view></div> <!--Application div-->
+        <div class="loader" data-ng-if="dataLoading"></div> <!--Rounded loader animation-->
+        <div class="alert alert-dismissible alert-danger" data-ng-if="loadingError!=''" data-ng-bind="loadingError"></div>  <!-- Server error bootstrap alert-->
     </div>
     <footer>
         <div style="text-align:center">
