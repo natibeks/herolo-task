@@ -17,7 +17,7 @@ app.factory('booksService', function ($q, $http) {
 
     var modifyData = function (data) {
         angular.forEach(data, function (o, i) {
-            data[i]["Index"] = i + 1;
+            data[i]["Id"] = i + 1;
             var dateVals = data[i].Date.split("/");
             var parsed = new Date(dateVals[2], dateVals[1]-1, dateVals[0]);
             data[i].Date = new Date(parsed);
