@@ -1,4 +1,5 @@
-﻿app.factory('booksService', function ($q, $http) {
+//Server data handling service
+app.factory('booksService', function ($q, $http) {
     var getBooks = function () {
         var d = $q.defer();
         $http.get('books.json')
