@@ -18,7 +18,7 @@
         <tbody>
             <tr data-ng-repeat="book in books | pagination: pager.curr * pager.size | limitTo: pager.size" data-ng-mouseover="hoverInBookRow(book)" data-ng-mouseleave="hoverOutBookRow(book)">
                 <td data-ng-repeat="field in tableFields" data-ng-style="{'width':field.Width}">
-                    <div data-ng-bind="book[field.Title]" data-ng-if="field.Title == 'Id'"></div>
+                    <div data-ng-bind="book['Index']" data-ng-if="field.Title == '#'"></div>
                     <div data-ng-if="editMode != book.Id">
                         <div data-ng-bind="book[field.Title] | capitalizeeachword" data-ng-if="field.Title == 'Autuor'"></div>
                         <div data-ng-bind="book[field.Title] | date:'dd/MM/yyyy'" data-ng-if="field.Title == 'Date'"></div>
