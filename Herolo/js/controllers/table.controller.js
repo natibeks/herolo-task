@@ -47,7 +47,7 @@ app.controller('TableController', function ($scope, $rootScope, $http, $filter, 
         return index;
     }
 
-    $scope.tableFields = [{ Title: "Id", Width: "50px" },
+    $scope.tableFields = [{ Title: "#", Width: "50px" },
         { Title: "Autuor", Width: "200px" },
         { Title: "Date", Width: "200px" },
         { Title: "Title", Width: "auto" }];
